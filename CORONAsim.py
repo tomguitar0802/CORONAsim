@@ -48,4 +48,5 @@ else:
     plt.plot(x,KE,"-o",ms=3)
     plt.xlabel("x(mm)")
     plt.ylabel("KE(eV)")
+    plt.xlim(-3,3)
 st.pyplot(fig)
