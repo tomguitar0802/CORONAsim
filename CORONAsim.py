@@ -7,7 +7,12 @@ fig=plt.figure()
 MODE=st.sidebar.radio("MODE",["u-E","x-KE"])
 d=st.sidebar.slider("電極間距離(mm)",0.1,10.0,3.0,0.1)/1000
 V=st.sidebar.slider("印加電圧(V)",0,5000,3000,50)
-v0=st.sidebar.slider("尖度(%)",0.1,99.9,98.1,0.1)/100*np.pi
+focus=st.sidebar.checkbox("focus")
+if focus==True:
+    m=95.0
+else:
+    m=0.1
+v0=st.sidebar.slider("尖度(%)",m,99.9,98.1,0.1)/100*np.pi
 lm=375/(10**9)
 
 u=np.linspace(-2,2,101)
