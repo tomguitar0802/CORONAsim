@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 plt.rc('font', family='BIZ UDGothic')
 st.sidebar.write("放電環境の設定")
-d=st.sidebar.slider("電極間距離(mm)",0.1,10.0,3.0,0.1)/1000   #電極間距離
-V=st.sidebar.slider("印加電圧(V)",0,5000,3000,50)             #印加電圧
+d=st.sidebar.slider("電極間距離d(mm)",0.1,10.0,3.0,0.1)/1000   #電極間距離
+V=st.sidebar.slider("印加電圧V(V)",0,5000,3000,50)             #印加電圧
 m=0.1                                                         #最小v
-v0=st.sidebar.slider("尖度(%)",m,99.9,98.1916,0.1)/100*np.pi     #尖度
+v0=st.sidebar.slider("尖度v0(%)",m,99.9,98.1916,0.1)/100*np.pi     #尖度
 lm=375/(10**9)                                                #平均自由行程
 st.sidebar.write("サンプルポイントの設定")
 u_sample=st.sidebar.slider("u",-1.75,1.75,0.0,0.05)
